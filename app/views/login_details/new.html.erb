@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>CrypticX</title>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Major+Mono+Display" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+       <img class="crypt" src="images/cripticx.png" width="350px" height="100px">
+    </header>
+    <section id="login">
+      <%= form_for :login_detail, url: {controller:"login_details", action: "create"},html: {class: "login-box", id: "reg_form"} do |form| %>
+        <h1>Login</h1>
+          <div class="textbox">
+            <i class="fas fa-user"></i>
+            <%= form.text_field :email, placeholder: "Your Email", class:"register-field"   %>
+          </div>
+
+          <div class="textbox">
+            <i class="fas fa-lock"></i>
+            <%= form.password_field :password, placeholder: "New Password", class:"register-field", id:"password-field"   %>
+          </div>
+          <%= form.submit "Sign in", id:"register-button"  %>
+
+          <p>Don't have an account? <span class="highlight"><a href="register.html"><strong>Register here</strong></a></span></p>
+      <% end %>
+    </section>
+  </body>
+</html>
