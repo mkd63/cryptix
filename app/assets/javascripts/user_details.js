@@ -62,6 +62,7 @@ $(document).ready(function () {
           label.addClass('error');
           label.insertBefore(element);
       },
+
       wrapper: 'span'
   })
 });

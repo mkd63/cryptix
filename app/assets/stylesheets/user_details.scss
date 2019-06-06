@@ -95,7 +95,7 @@ a {
   width: 100%;
   overflow: hidden;
   font-size: 20px;
-  padding: 8px 0;
+  padding: 20px 0 8px 0;
   margin: 8px 0;
   border-bottom: 1px solid #EA6965;
 }
@@ -113,6 +113,10 @@ a {
   width: 80%;
   float: left;
   margin: 0 10px;
+}
+.head{
+	text-align: center;
+	font-size: 30px;
 }
 .level-content{
 	width: 100%;
@@ -178,6 +182,10 @@ table{
 th,td{
   padding: 15px;
   text-align: left;
+}
+label.error{
+	color: #EA6965;
+	font-size: 12px;
 }
 .time{
     font-family: 'Comfortaa', cursive;

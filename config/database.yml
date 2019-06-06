@@ -10,7 +10,7 @@ default: &default
     adapter: postgresql
     host: localhost
     username: postgres
-    password: local_env.yml banadu like devboat? har baar change na karna pade :rage:
+    password: aahaNoob63
     encoding: unicode
 
 development:
