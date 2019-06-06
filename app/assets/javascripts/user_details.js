@@ -60,7 +60,7 @@ $(document).ready(function () {
       },
       errorPlacement: function(label, element) {
           label.addClass('error');
-          label.insertBefore(element);
+          label.insertAfter(element[0].parentElement);
       },
       wrapper: 'span'
   })

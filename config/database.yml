@@ -5,13 +5,13 @@
 #   gem 'sqlite3'
 #
 default: &default
-    pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-    timeout: 5000
-    adapter: postgresql
-    host: localhost
-    username: postgres
-    password: local_env.yml banadu like devboat? har baar change na karna pade :rage:
-    encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  adapter: postgresql
+  host: localhost
+  username: postgres
+  password: fixed it bitch
+  encoding: unicode
 
 development:
   <<: *default
