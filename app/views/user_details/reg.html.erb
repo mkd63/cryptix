@@ -13,45 +13,41 @@
 
     </header>
     <section id="register">
-      <h1>Register</h1>
+
 
     <%= form_for :user_detail, url: {controller:"user_details", action: "create"},html: {class: "register-box", id: "reg_form"} do |form| %>
-       
-        <table>
-          <tr class="textbox">
-            <td><i class="fas fa-user"></i></td>
-            <td><%= form.text_field :name, placeholder: "Name", class:"register-field"  %></td>
-          </tr>
-          <tr class="textbox">
-            <td><i class="fas fa-signature"></i></td>
-            <td><%= form.text_field :username, placeholder: "Your UserName", class:"register-field"   %></td>
-          </tr>
-          <tr class="textbox">
-            <td><i class="fas fa-envelope"></i></td>
-            <td><%= form.text_field :email, placeholder: "Your Email", class:"register-field"   %></td>
-          </tr>
-          <tr class="textbox">
-            <td> <i class="fa fa-phone"></i></td>
-            <td><%= form.telephone_field :contactno, placeholder: "Mobile Number", class:"register-field"   %></td>
-          </tr>
-          <tr class="textbox">
-            <td><i class="fas fa-lock"></i></td>
-            <td><%= form.password_field :password, placeholder: "New Password", class:"register-field", id:"password-field"   %></td>
-          </tr>
-          <tr class="textbox">
-            <td><i class="fas fa-lock"></i></td>
-            <td><%= form.password_field :password_confirmation, placeholder: "Confirm Password", class:"register-field"   %></td>
-          </tr>
-          <span class="password-instructions-wrapper">The password must be at leastlmao 8 characters long, contain a number, a symbol, an uppercase and a lowercase letter.</span>
-          <span class="password-instructions-wrapper"></span>
-          <tr>
-            <td><%= form.submit "Create an account", id:"register-button"  %></td>
-          </tr>
-        </table>
-
+      <h1 class="head">Register</h1>
+    <div class="textbox">
+      <i class="fas fa-user"></i>
+      <%= form.text_field :name, placeholder: "Name", class:"register-field"   %>
+    </div>
+    <div class="textbox">
+      <i class="fas fa-signature"></i>
+      <%= form.text_field :username, placeholder: "Your UserName", class:"register-field"   %>
+    </div>
+    <div class="textbox">
+      <i class="fas fa-envelope"></i>
+      <%= form.text_field :email, placeholder: "Your Email", class:"register-field"   %>
+    </div>
+    <div class="textbox">
+      <i class="fas fa-phone"></i>
+      <%= form.telephone_field :contactno, placeholder: "Mobile Number", class:"register-field"   %>
+    </div>
+    <div class="textbox">
+      <i class="fas fa-lock"></i>
+      <%= form.password_field :password, placeholder: "New Password", class:"register-field", id:"password-field"   %>
+    </div>
+    <div class="textbox">
+      <i class="fas fa-lock"></i>
+      <%= form.password_field :password_confirmation, placeholder: "Confirm Password", class:"register-field"   %>
+    </div>
+    <span class="password-instructions-wrapper">The password must be at least 8 characters long, contain a number, a symbol, an uppercase and a lowercase letter.</span>
+    <span class="password-instructions-wrapper"></span>
+    <%= form.submit "Create an account", id:"btn"  %>
+    <%#<p>Already have an account? <%= link_to "<span class="highlight">Login</span>".html_safe, "/login" %>
 
     <% end %>
-    <p>Already have an account? <span class="highlight"><a href="login.html"><strong>Login</strong></a></span></p>
+
 
     </section>
   </body>
