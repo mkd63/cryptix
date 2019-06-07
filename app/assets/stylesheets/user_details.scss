@@ -183,7 +183,42 @@ th,td{
   padding: 15px;
   text-align: left;
 }
-label.error{
+/* Cross Icon */
+.errorIcon
+	 {
+			 background: url();
+			 height: 16px;
+			 display:inline;
+
+	 }
+.cross {
+    border-radius: 100%;
+    height: 26px;
+    width: 26px;
+}
+.cross:after {
+    height: 0;
+    left: 3px;
+    top: 11px;
+    width: 16px;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+.cross:before {
+    height: 0;
+    left: 3px;
+    top: 11px;
+    width: 16px;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+.error{
 	color: #EA6965;
 	font-size: 12px;
 }

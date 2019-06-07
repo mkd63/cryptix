@@ -16,11 +16,13 @@
 
 
     <%= form_for :user_detail, url: {controller:"user_details", action: "create"},html: {class: "register-box", id: "reg_form"} do |form| %>
-      <h1 class="head">Register</h1>
-    <div class="textbox">
+      <h1 class="head cross">Register</h1>
+    <div class="textbox error" style="display: none;">
       <i class="fas fa-user"></i>
       <%= form.text_field :name, placeholder: "Name", class:"register-field"   %>
+      <i class="fa fa-exclamation-circle"></i>
     </div>
+
     <div class="textbox">
       <i class="fas fa-signature"></i>
       <%= form.text_field :username, placeholder: "Your UserName", class:"register-field"   %>

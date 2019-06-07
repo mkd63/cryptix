@@ -5,6 +5,8 @@
 $(document).ready(function () {
     $('#reg_form').validate({
       debug: false,
+      errorClass: 'cross error',  // default "error"
+      errorElement: 'span',   // default "label"
       rules: {
         	"user_detail[name]": { required: true, minlength: 2},
         	"user_detail[password]": {
@@ -35,7 +37,7 @@ $(document).ready(function () {
       },
    		messages: {
           "user_detail[firstname]": {
-          	required: "First Name can't be blank",
+          	required: '<i class="fa fa-exclamation-circle rediconcolour"></i> ' + "First Name can't be blank",
           	minlength: "First name should contain atleast 2 characters"
           },
           "user_detail[password]": {
@@ -59,10 +61,20 @@ $(document).ready(function () {
           "user_detail[username]":"UserName can't be blank."
       },
       errorPlacement: function(label, element) {
-          label.addClass('error');
-          label.insertAfter(element[0].parentElement);
+          label.addClass('cross');
+        label.insertAfter(element[0].parentElement);
       },
+      errorPlacement: function(error, element) {
+        $('<div class="errorIcon"></div>').insertAfter(element);
+      error.insertAfter(element.parent('div'));
 
+      },
+      highlight: function (element) {
+      $(element).next('span').show();
+      },
+      unhighlight: function (element) {
+      $(element).next('span').hide();
+      },
       wrapper: 'span'
   })
 });
