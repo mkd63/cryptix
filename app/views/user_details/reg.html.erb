@@ -9,14 +9,14 @@
   </head>
   <body>
     <header>
-      <img class="crypt" src="images/cripticx.png" width="350px" height="100px">
+      <img class="crypt" src="/images/cripticx.png" width="350px" height="100px">
 
     </header>
     <section id="register">
 
 
     <%= form_for :user_detail, url: {controller:"user_details", action: "create"},html: {class: "register-box", id: "reg_form"} do |form| %>
-      <h1 class="head cross">Register</h1>
+      <h1 class="head">Register</h1>
     <div class="textbox error" style="display: none;">
       <i class="fas fa-user"></i>
       <%= form.text_field :name, placeholder: "Name", class:"register-field"   %>
