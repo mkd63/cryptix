@@ -2,11 +2,39 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>CrypticX</title>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Major+Mono+Display" rel="stylesheet">
   </head>
   <body>
-    <section>
-      <p>Welcome <%= @user_detail.username %></p>
+    <header>
+       <img class="crypt" src="images/cripticx.png" width="350px" height="100px">
+      <div class="menu">
+        <p class="menu-item" style="color: #171717">Home</p>
+        <a href="play.html"><p class="menu-item">Play</p></a>
+        <a href="lb.html"><p class="menu-item">Leaderboard</p></a>
+        <%= link_to "<p class='menu-item'>Logout</p>".html_safe, "/login" %>
+      </div>
+    </header>
+    <section id="level">
+      <div class="time">
+        The <span class="hl">Hunt</span> begins on february 22,2019 at 00:59hrs IST.
+      </div>
+      <div class="rules">
+        <h1>Rules</h1>
+        <ol>
+          <li>Remember Google Is Your Friend.</li>
+          <li>Answers can contain alphabets in lower case and numbers.</li>
+          <li>Special characters and spaces are not allowed in answers.</li>
+          <li>Hints will be uploaded <a href="link">here</a>.</li>
+          <li>One team should consist of only one participant.</li>
+          <li>Event will end on february 27,2019 at 20:00hrs.</li>
+          <li>Top 15 participants who have the highest score will qualify for finals on February 28,2019.</li>
+
+        </ol>
+      </div>
     </section>
+
   </body>
 </html>

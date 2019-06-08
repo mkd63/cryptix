@@ -7,13 +7,13 @@ class LoginDetailsController < ApplicationController
     if user #&& user.authenticate(params[:login_detail][:password])
       session[:user_id] = user.id
       flash[:success] = 'Successfully Logged In!'
-      redirect_to '/cryptix'
+      redirect_to '/home'
     else
       flash[:warning] = "Invalid Username or Password"
       redirect_to '/login'
     end
   end
-  def profile
+  def home
 
   end
   def destroy
