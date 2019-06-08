@@ -3,7 +3,8 @@ class UserDetailsController < ApplicationController
 
   end
   def show
-    @user_detail = UserDetail.find(params[:id])
+    logger.debug "The user is #{session[:user_id]}"
+    @user_detail = UserDetail.find(session[:user_id])
   end
   def create
     @user_detail = UserDetail.new(user_detail_params)
