@@ -10,7 +10,7 @@ default: &default
   adapter: postgresql
   host: localhost
   username: postgres
-  password: bitch
+  password: aahaNoob63
   encoding: unicode
 
 development:

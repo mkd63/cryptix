@@ -9,15 +9,18 @@
   </head>
   <body>
     <header>
-       <img class="crypt" src="images/cripticx.png" width="350px" height="100px">
+       <img class="crypt" src="/images/cripticx.png" width="350px" height="100px">
       <div class="menu">
         <p class="menu-item" style="color: #171717">Home</p>
-        <a href="play.html"><p class="menu-item">Play</p></a>
+        <%= link_to "<p class='menu-item'>Play</p>".html_safe, "/play" %>
         <a href="lb.html"><p class="menu-item">Leaderboard</p></a>
         <%= link_to "<p class='menu-item'>Logout</p>".html_safe, "/login" %>
       </div>
     </header>
     <section id="level">
+      <div class="time">
+        <h1>Welcome <%= @user_detail.username %></h1><br>
+      </div>
       <div class="time">
         The <span class="hl">Hunt</span> begins on february 22,2019 at 00:59hrs IST.
       </div>

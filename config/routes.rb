@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'games/play'
+
   get    '/login',   to: 'login_details#new'
   post   '/login',   to: 'login_details#create'
   get    '/cryptix', to: 'login_details#home'
@@ -7,7 +9,8 @@ Rails.application.routes.draw do
   resources :user_details do
    get :reg, on: :collection
   end
-
+  get    '/play'   ,to: 'games#play'
+  resources :games
   resources :login_details, :except => ['show', 'update', 'destroy']
   get  '/home' => 'user_details#show'
 
