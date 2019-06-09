@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>CrypticX</title>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Major+Mono+Display" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+       <img class="crypt" src="/images/cripticx.png" width="350px" height="100px">
+    </header>
+    <section id="login">
+      <%= form_for :add_question , url: {controller:"add_questions", action: "create"},html: {class: "login-box", id: "reg_form"} do |form| %>
+        <h1>Add Questions</h1>
+          <div class="textbox">
+            <i class="fas fa-user"></i>
+            <%= form.text_field :level, placeholder: "Question's Level", class:"register-field"   %>
+          </div>
+
+          <div class="textbox">
+            <i class="fas fa-lock"></i>
+            <%= form.text_field :question, placeholder: "Enter Question", class:"register-field", id:"password-field"   %>
+          </div>
+          <div class="textbox">
+            <i class="fas fa-lock"></i>
+            <%= form.text_field :answer, placeholder: "Enter Answer", class:"register-field", id:"password-field"   %>
+          </div>
+          <%= form.submit "Submit", id:"btn"  %>
+
+          <p>Don't have an account? <span class="highlight"><a href="register.html"><strong>Register here</strong></a></span></p>
+      <% end %>
+    </section>
+  </body>
+</html>

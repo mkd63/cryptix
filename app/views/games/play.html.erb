@@ -11,16 +11,16 @@
     <header>
        <img class="crypt" src="/images/cripticx.png" width="350px" height="100px">
       <div class="menu" id="myTopnav" >
-        <a href="home.html"><p class="menu-item">Home</p></a>
+        <%= link_to "<p class='menu-item'>Home</p>".html_safe, "/home" %>
         <p class="menu-item" style="color: #171717">Play</p>
         <a href="lb.html"><p class="menu-item">Leaderboard</p></a>
-        <a href="login.html"><p class="menu-item">Logout</p></a>
+        <%= link_to "<p class='menu-item'>Logout</p>".html_safe, "/login" %>
 </div>
 </header>
 
     <section id="level">
       <div class="level-box">
-        <h1>Level 0</h1>
+        <h1>Level <%= @add_question.level  %> </h1>
 
         <div class="level-content">
           <div class="question">

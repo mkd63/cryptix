@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'add_questions/index'
+
   get 'games/play'
 
   get    '/login',   to: 'login_details#new'
@@ -10,6 +12,7 @@ Rails.application.routes.draw do
    get :reg, on: :collection
   end
   get    '/play'   ,to: 'games#play'
+  resources :add_questions
   resources :games
   resources :login_details, :except => ['show', 'update', 'destroy']
   get  '/home' => 'user_details#show'
