@@ -9,8 +9,8 @@ default: &default
   timeout: 5000
   adapter: postgresql
   host: localhost
-  username: postgres
-  password: elderswand
+  username: <%= ENV["PG_USERNAME"] %>
+  password: <%= ENV["PG_PASSWORD"] %>
   encoding: unicode
 
 development:
