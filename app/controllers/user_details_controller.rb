@@ -12,6 +12,6 @@ class UserDetailsController < ApplicationController
     redirect_to '/login'
   end
   def user_detail_params
-    params.require(:user_detail).permit(:name, :email, :username, :contactno, :password)
+    params.require(:user_detail).permit(:name, :email, :username, :contactno, :password, :level => 1)
   end
 end
