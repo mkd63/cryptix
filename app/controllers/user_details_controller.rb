@@ -8,7 +8,7 @@ class UserDetailsController < ApplicationController
   end
   def create
     @user_detail = UserDetail.new(user_detail_params)
-    @user_detail.level = 1
+    @user_detail.level = 0
     @user_detail.save
     redirect_to '/login'
   end
