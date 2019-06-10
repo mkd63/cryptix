@@ -20,17 +20,20 @@
 
     <section id="level">
       <div class="level-box">
-        <h1>Level <%= @question.level  %> </h1>
-
-        <div class="level-content">
-          <div class="question">
-            <p><%= @question.question  %></p>
-            <img src="images/lvl0.png">
+        <%= form_for :game, url: {controller:"games", action: "submit_answer"},html: {class: "login-box", id: "reg_form"} do |form| %>
+          <h1>Level <%= @question.level  %> </h1>
+          <div class="level-content">
+            <div class="question">
+              <p><%= @question.question  %></p>
+              <img src="images/lvl0.png">
+            </div>
+          <div class="textbox">
+            <%= form.text_field :answer, placeholder: "Your Answer goes here...", class:"register-field"   %>
           </div>
-          <input type="text" placeholder="Your answer goes here...">
-          <%#= form.submit "Submit", id:"btn"  %>
-
         </div>
+          <%= form.submit "Sign in", id:"btn"  %>
+
+      <% end %>
       </div>
     </section>
   </body>

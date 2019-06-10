@@ -10,4 +10,13 @@ class GamesController < ApplicationController
       redirect_to '/login'
     end
   end
+  def submit_answer
+    @game = game.answer
+    @answer = Question.find_by(answer: @level)
+    if(@game === @answer)
+      #tt randwa
+    else
+      #tt chammaar
+    end
+  end
 end
