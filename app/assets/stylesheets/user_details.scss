@@ -340,20 +340,20 @@ header{
   border-bottom: 3px solid #EA6965;
   margin-bottom: 50px;
 }
-  .menu.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .register-box{
-  width: 55%;
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  color: white;
-  }
-  .login-box{
+.menu.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+.register-box{
+	width: 55%;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: white;
+}
+.login-box{
   width: 55%;
   position: absolute;
   top: 55%;

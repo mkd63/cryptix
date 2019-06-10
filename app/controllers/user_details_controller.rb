@@ -8,10 +8,11 @@ class UserDetailsController < ApplicationController
   end
   def create
     @user_detail = UserDetail.new(user_detail_params)
+    @user_detail.level = 1
     @user_detail.save
     redirect_to '/login'
   end
   def user_detail_params
-    params.require(:user_detail).permit(:name, :email, :username, :contactno, :password, :level => 1)
+    params.require(:user_detail).permit(:name, :email, :username, :contactno, :password)
   end
 end

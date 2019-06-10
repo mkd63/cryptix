@@ -1,10 +1,11 @@
 class GamesController < ApplicationController
   def play
     if(session[:user_id] != nil)
-      user = UserDetail.find_by(id: session[:user_id])
+      logger.debug "The level is #{session[:user_id]}"
+      user = UserDetail.find(session[:user_id])
       logger.debug "The level is #{user}"
-      @c_level = user.level
-      @question = Question.find_by(level: @c_level)
+      @level = user.level
+      @question = Question.find_by(level: @level)
     else
       redirect_to '/login'
     end
