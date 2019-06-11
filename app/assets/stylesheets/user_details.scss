@@ -77,7 +77,7 @@ a {
   color: white;
 }
 .level-box{
-  width: 40%;
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -85,6 +85,7 @@ a {
   color: white;
 }
 .level-box h1{
+
 	font-family: 'Comfortaa', cursive;
   float: left;
   font-size: 40px;
@@ -98,6 +99,32 @@ a {
   padding: 20px 0 8px 0;
   margin: 8px 0;
   border-bottom: 1px solid #EA6965;
+}
+.textbx{
+	width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 20px 0 8px 0;
+  margin: 8px 0;
+}
+#notice{
+	//color:#EA6965;
+	font-size: 18px;
+	font-family: 'Comfortaa', cursive;
+	text-align: center;
+	//padding-top: 10px;
+	border-radius: 6px;
+	//border: 2px solid #EA6965;
+	//background-color: #FF8080;
+	color: white;
+	position: absolute;
+	margin-top: 65px;
+	margin-left: 180px;
+	padding-left: 100px;
+	padding-right: 100px;
+	//left: 48%;
+
+
 }
 .textbox i{
   width: 26px;
@@ -124,7 +151,7 @@ a {
   font-size: 20px;
   padding: 8px 0;
   margin: 8px 0;
-  border-bottom: 1px solid #EA6965;
+  //border-bottom: 1px solid #EA6965;
 }
 .level-content input{
   border: none;

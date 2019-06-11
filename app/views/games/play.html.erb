@@ -30,10 +30,20 @@
           <div class="textbox">
             <%= form.text_field :answer, placeholder: "Your Answer goes here...", class:"register-field"   %>
           </div>
-        </div>
+
           <%= form.submit "Submit", id:"btn"  %>
 
       <% end %>
+      <% unless flash.empty? %>
+      <div id="notice">
+        
+        <% flash.each do |name, msg| %>
+         <%= content_tag :div, msg, class: [:alert, alert_for(name)]%>
+        <% end %>
+      <% end %>
+      <p><%#= flash_class(:error) %></p>
+      </div
+      </div>
       </div>
     </section>
   </body>
