@@ -9,6 +9,7 @@ class UserDetailsController < ApplicationController
   def create
     @user_detail = UserDetail.new(user_detail_params)
     @user_detail.level = 0
+    @user_detail.last_answered = "2019-02-21 00:00:00"
     @user_detail.save
     redirect_to '/login'
   end
@@ -16,7 +17,6 @@ class UserDetailsController < ApplicationController
     params.require(:user_detail).permit(:name, :email, :username, :contactno, :password)
   end
   def leaderboard
-    @users = UserDetail.all
-    
+    @users = UserDetail.all.order("level DESC, last_answered ASC")
   end
 end

@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   end
 
   get    '/play', to: 'games#play'
-  post    '/play',   to: 'games#submit_answer'
+  post   '/play', to: 'games#submit_answer'
 
   resources :add_questions
 

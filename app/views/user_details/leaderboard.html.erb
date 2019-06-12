@@ -23,31 +23,27 @@
         <h1 class="hd">Leaderboard</h1>
         <hr class="linebreak">
         <table style="width: 85%" class="tab">
-  		<tr>
-  			<th>Position</th>
-    		<th>Username</th>
-    		<th>Level</th>
-    		<th>Time</th>
-  		</tr>
-  		<tr>
-  			<td>1</td>
-    		<td>Crypticx</td>
-    		<td style="font-size: 20px;">∞</td>
-    		<td>0000-00-00 00:00:00</td>
-      </tr>
-      <% @users.each do |user| %>
-        <tr>
-          <td><%= %></td>
-          <td><%= user.username %></td>
-          <td><%= user.level %></td>
-          <td><%= user.last_answered %></td>
-        </tr>
-      <% end %>
-		</table>
-
-
-
-
+      		<tr>
+      			<th>Position</th>
+        		<th>Username</th>
+        		<th>Level</th>
+        		<th>Time</th>
+      		</tr>
+      		<tr>
+      			<td>1</td>
+        		<td>Crypticx</td>
+        		<td style="font-size: 20px;">∞</td>
+        		<td>0000-00-00 00:00:00</td>
+          </tr>
+          <% @users.each.with_index(2) do |user, pos| %>
+            <tr>
+              <td><%= pos %></td>
+              <td><%= user.username %></td>
+              <td><%= user.level %></td>
+              <td><%= user.last_answered %></td>
+            </tr>
+          <% end %>
+    		</table>
       </div>
     </section>
 
