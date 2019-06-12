@@ -27,6 +27,7 @@
               <p><%= @question.question  %></p>
               <img src="images/lvl0.png">
             </div>
+          
           <div class="textbox">
             <%= form.text_field :answer, placeholder: "Your Answer goes here...", class:"register-field"   %>
           </div>
@@ -34,9 +35,10 @@
           <%= form.submit "Submit", id:"btn"  %>
 
       <% end %>
+
       <% unless flash.empty? %>
       <div id="notice">
-        
+
         <% flash.each do |name, msg| %>
          <%= content_tag :div, msg, class: [:alert, alert_for(name)]%>
         <% end %>

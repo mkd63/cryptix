@@ -114,3 +114,4 @@ $.validator.addMethod("emailid", function (value, element) {
 $.validator.addMethod("onlychars", function (value) {
         return /^[a-zA-Z]+$/.test(value) // has only allowed chars letter
     }, "The password contains non-admitted characters");
+alert(gon.res)

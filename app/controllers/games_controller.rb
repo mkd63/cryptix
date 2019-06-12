@@ -18,12 +18,13 @@ class GamesController < ApplicationController
     logger.debug "The answer given is #{params[:game][:answer]}"
     if(params[:game][:answer] == answer)
       logger.debug "The answer is correct"
-      flash[:success] = "Right Answer!"
+
+      flash[:success] = "Right Answer!!"
       $user.level += 1
       $user.save
     else
       logger.debug "The answer is incorrect"
-      flash[:error] = "O no!"
+      flash[:error] = "Wrong Answer!!"
 
     end
   redirect_to '/play'

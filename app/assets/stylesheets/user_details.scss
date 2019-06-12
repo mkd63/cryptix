@@ -16,6 +16,7 @@ header{
   font-size: 32px;
   font-family: 'Comfortaa', cursive;
   background: linear-gradient(125deg,white,#EA6965);
+	padding-bottom: 20px;
 }
 a {
   text-decoration: none;
@@ -79,7 +80,7 @@ a {
 .level-box{
   width: 100%;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%,-50%);
   color: white;
@@ -119,7 +120,7 @@ a {
 	color: white;
 	position: absolute;
 	margin-top: 65px;
-	margin-left: 180px;
+	margin-left: 130px;
 	padding-left: 100px;
 	padding-right: 100px;
 	//left: 48%;
