@@ -9,9 +9,11 @@ Rails.application.routes.draw do
   get '/logout',  to: 'login_details#destroy'
 
   get    '/register',to: 'user_details#reg'
+  get    '/leaderboard',to: 'user_details#leaderboard'
 
   resources :user_details do
    get :reg, on: :collection
+   get :leaderboard, on: :collection
   end
 
   get    '/play', to: 'games#play'

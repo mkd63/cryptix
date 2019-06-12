@@ -15,4 +15,8 @@ class UserDetailsController < ApplicationController
   def user_detail_params
     params.require(:user_detail).permit(:name, :email, :username, :contactno, :password)
   end
+  def leaderboard
+    @users = UserDetail.all
+    
+  end
 end

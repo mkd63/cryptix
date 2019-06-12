@@ -13,7 +13,7 @@
       <div class="menu" id="myTopnav" >
         <%= link_to "<p class='menu-item'>Home</p>".html_safe, "/home" %>
         <p class="menu-item" style="color: #171717">Play</p>
-        <a href="lb.html"><p class="menu-item">Leaderboard</p></a>
+        <%= link_to "<p class='menu-item'>Leaderboard</p>".html_safe, "/leaderboard" %>
         <%= link_to "<p class='menu-item'>Logout</p>".html_safe, "/logout" %>
 </div>
 </header>
@@ -27,7 +27,7 @@
               <p><%= @question.question  %></p>
               <img src="images/lvl0.png">
             </div>
-          
+
           <div class="textbox">
             <%= form.text_field :answer, placeholder: "Your Answer goes here...", class:"register-field"   %>
           </div>

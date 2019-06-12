@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>CrypticX</title>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Major+Mono+Display" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+       <img class="crypt" src="images/cripticx.png" width="350px" height="100px">
+      <div class="menu">
+      	<a href="home.html"><p class="menu-item">Home</p></a>
+        <a href="play.html"><p class="menu-item">Play</p></a>
+        <p class="menu-item" style="color: #171717">Leaderboard</p>
+        <a href="login.html"><p class="menu-item">Logout</p></a>
+      </div>
+    </header>
+
+    <section id="lbd">
+      <div class="lb">
+        <h1 class="hd">Leaderboard</h1>
+        <hr class="linebreak">
+        <table style="width: 85%" class="tab">
+  		<tr>
+  			<th>Position</th>
+    		<th>Username</th>
+    		<th>Level</th>
+    		<th>Time</th>
+  		</tr>
+  		<tr>
+  			<td>1</td>
+    		<td>Crypticx</td>
+    		<td style="font-size: 20px;">∞</td>
+    		<td>0000-00-00 00:00:00</td>
+      </tr>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= %></td>
+          <td><%= user.username %></td>
+          <td><%= user.level %></td>
+          <td><%= user.last_answered %></td>
+        </tr>
+      <% end %>
+		</table>
+
+
+
+
+      </div>
+    </section>
+
+  </body>
+</html>
