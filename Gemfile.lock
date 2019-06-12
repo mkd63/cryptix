@@ -219,6 +219,7 @@ DEPENDENCIES
   gon
   jbuilder (~> 2.5)
   jquery-rails (~> 4.3.3)
+  less-rails
   pg (>= 0.18, < 2.0)
   puma (~> 3.7)
   rails (~> 5.1.7)

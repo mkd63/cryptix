@@ -24,7 +24,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap', '~> 4.0'
 gem 'gon'
-gem 'therubyracer'
 gem 'less-rails'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
