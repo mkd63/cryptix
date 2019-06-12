@@ -40,7 +40,8 @@
               <td><%= pos %></td>
               <td><%= user.username %></td>
               <td><%= user.level %></td>
-              <td><%= user.last_answered %></td>
+              <td><%= user.try(:last_answered).try(:strftime, ("%Y-%m-%d %H:%M:%S"))  %></td>
+
             </tr>
           <% end %>
     		</table>
