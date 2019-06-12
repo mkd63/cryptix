@@ -21,7 +21,7 @@ class GamesController < ApplicationController
 
       flash[:success] = "Right Answer!!"
       $user.level += 1
-      $user.last_answered = $user.updated_at
+      $user.last_answered = DateTime.now
       $user.save
     else
       logger.debug "The answer is incorrect"
