@@ -9,14 +9,14 @@
   </head>
   <body>
     <header>
-       <img class="crypt" src="/images/cripticx.png" width="350px" height="100px">
+      <img class="crypt" src="/images/cripticx.png" width="350px" height="100px">
       <div class="menu" id="myTopnav" >
         <%= link_to "<p class='menu-item'>Home</p>".html_safe, "/home" %>
-        <p class="menu-item" style="color: #171717">Play</p>
+        <%= link_to "<p class='menu-item'>Play</p>".html_safe, "/play" %>
         <%= link_to "<p class='menu-item'>Leaderboard</p>".html_safe, "/leaderboard" %>
         <%= link_to "<p class='menu-item'>Logout</p>".html_safe, "/logout" %>
-</div>
-</header>
+      </div>
+    </header>
 
     <section id="level">
       <div class="level-box">

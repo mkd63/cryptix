@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 
   get 'games/play'
 
-  get    '/login',   to: 'login_details#new'
-  post   '/login',   to: 'login_details#create'
+  get    '/',   to: 'login_details#new'
+  post   '/',   to: 'login_details#create'
   get    '/cryptix', to: 'login_details#home'
   get '/logout',  to: 'login_details#destroy'
 

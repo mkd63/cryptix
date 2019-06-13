@@ -9,7 +9,7 @@ class GamesController < ApplicationController
       $level = $user.level
       @question = Question.find_by(level: $level)
     else
-      redirect_to '/login'
+      redirect_to '/'
     end
   end
   def submit_answer
@@ -28,6 +28,6 @@ class GamesController < ApplicationController
       flash[:error] = "Wrong Answer!!"
 
     end
-  redirect_to '/play'
+    redirect_to '/play'
   end
 end
