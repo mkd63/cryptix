@@ -10,7 +10,7 @@ class LoginDetailsController < ApplicationController
       redirect_to '/home'
     else
       flash[:warning] = "Invalid Username or Password"
-      redirect_to '/login'
+      redirect_to '/'
     end
   end
   def home
@@ -18,6 +18,6 @@ class LoginDetailsController < ApplicationController
   end
   def destroy
     session[:user_id] = nil
-    redirect_to '/login', notice: 'Logged out!'
+    redirect_to '/', notice: 'Logged out!'
   end
 end
