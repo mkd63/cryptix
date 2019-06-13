@@ -11,10 +11,10 @@
     <header>
        <img class="crypt" src="/images/cripticx.png" width="350px" height="100px">
       <div class="menu">
-        <p class="menu-item" style="color: #171717">Home</p>
+        <%= link_to "<p class='menu-item'>Home</p>".html_safe, "/home" %>
         <%= link_to "<p class='menu-item'>Play</p>".html_safe, "/play" %>
         <%= link_to "<p class='menu-item'>Leaderboard</p>".html_safe, "/leaderboard" %>
-        <%= link_to "<p class='menu-item'>Logout</p>".html_safe, "/login" %>
+        <%= link_to "<p class='menu-item'>Logout</p>".html_safe, "/logout" %>
       </div>
     </header>
     <section id="level">

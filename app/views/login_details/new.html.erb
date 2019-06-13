@@ -25,7 +25,7 @@
           </div>
           <%= form.submit "Sign in", id:"btn"  %>
 
-          <p>Don't have an account? <span class="highlight"><a href="register.html"><strong>Register here</strong></a></span></p>
+          <p>Don't have an account? <%= link_to "<span class='highlight'>Register</span>".html_safe, "/register" %> </p>
       <% end %>
     </section>
   </body>

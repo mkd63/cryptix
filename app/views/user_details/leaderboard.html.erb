@@ -11,10 +11,10 @@
     <header>
        <img class="crypt" src="images/cripticx.png" width="350px" height="100px">
       <div class="menu">
-      	<a href="home.html"><p class="menu-item">Home</p></a>
-        <a href="play.html"><p class="menu-item">Play</p></a>
-        <p class="menu-item" style="color: #171717">Leaderboard</p>
-        <a href="login.html"><p class="menu-item">Logout</p></a>
+        <%= link_to "<p class='menu-item'>Home</p>".html_safe, "/home" %>
+        <%= link_to "<p class='menu-item'>Play</p>".html_safe, "/play" %>
+        <%= link_to "<p class='menu-item'>Leaderboard</p>".html_safe, "/leaderboard" %>
+        <%= link_to "<p class='menu-item'>Logout</p>".html_safe, "/logout" %>
       </div>
     </header>
 
@@ -41,7 +41,6 @@
               <td><%= user.username %></td>
               <td><%= user.level %></td>
               <td><%= user.try(:last_answered).try(:strftime, ("%Y-%m-%d %H:%M:%S"))  %></td>
-
             </tr>
           <% end %>
     		</table>
