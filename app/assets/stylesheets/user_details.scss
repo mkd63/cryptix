@@ -72,10 +72,18 @@ a {
 .register-box{
   width: 40%;
   position: absolute;
-  top: 55%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%,-50%);
   color: white;
+}
+.register-box h1{
+	font-family: 'Comfortaa', cursive;
+  float: left;
+  font-size: 40px;
+  border-bottom: 3px solid #EA6965;
+  margin-bottom: 50px;
+  padding: 2px 0;
 }
 .level-box{
   width: 100%;
