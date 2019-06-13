@@ -30,7 +30,7 @@
           <p>Don't have an account? <%= link_to "<span class='highlight'>Register</span>".html_safe, "/register" %> </p>
       <% end %>
       <% unless flash.empty? %>
-      <div id="notice">
+      <div id="notice1">
       <% flash.each do |name, msg| %>
        <%= content_tag :div, msg, class: [:alert, alert_for(name)]%>
       <% end %>
