@@ -25,7 +25,9 @@
           <div class="level-content">
             <div class="question">
               <p><%= @question.question %></p>
-
+              <% if @question.level == 1 %>
+              <img src="images/lvl0.png">
+              <% end %>
             </div>
 
           <div class="textbox">
