@@ -16,12 +16,12 @@
         <h1>Login</h1>
           <div class="textbox">
             <i class="fas fa-user"></i>
-            <%= form.text_field :email, placeholder: "Your Email", class:"register-field"   %>
+            <%= form.text_field :email, placeholder: "Email", class:"register-field"   %>
           </div>
 
           <div class="textbox">
             <i class="fas fa-lock"></i>
-            <%= form.password_field :password, placeholder: "New Password", class:"register-field", id:"password-field"   %>
+            <%= form.password_field :password, placeholder: "Password", class:"register-field", id:"password-field"   %>
           </div>
           <%= form.submit "Sign in", id:"btn"  %>
 
