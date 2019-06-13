@@ -22,7 +22,7 @@
       <%= form.text_field :name, placeholder: "Name", class:"register-field"   %>
 
     </div>
-    <i class="fa fa-exclamation-circle rediconcolour"></i>
+
     <div class="textbox">
       <i class="fas fa-signature"></i>
       <%= form.text_field :username, placeholder: "Your UserName", class:"register-field"   %>
@@ -42,7 +42,7 @@
     <div class="textbox">
       <i class="fas fa-lock"></i>
       <%= form.password_field :password_confirmation, placeholder: "Confirm Password", class:"register-field"   %>
-    </div>
+    </div><br>
     <span class="password-instructions-wrapper">The password must be at least 8 characters long, contain a number, a symbol, an uppercase and a lowercase letter.</span>
     <span class="password-instructions-wrapper"></span>
     <%= form.submit "Create an account", id:"btn"  %>
