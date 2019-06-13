@@ -9,8 +9,8 @@ class LoginDetailsController < ApplicationController
       flash[:success] = 'Successfully Logged In!'
       redirect_to '/home'
     else
-      flash[:warning] = "Invalid Username or Password"
-      redirect_to '/login'
+      flash[:error] = "Invalid Username or Password"
+      redirect_to '/'
     end
   end
   def home

@@ -11,8 +11,9 @@
     <header>
        <img class="crypt" src="/images/cripticx.png" width="350px" height="100px">
     </header>
-    <section id="login">
-      <%= form_for :login_detail, url: {controller:"login_details", action: "create"},html: {class: "login-box", id: "reg_form"} do |form| %>
+    <section>
+      <div id="login">
+      <%= form_for :login_detail, url: {controller:"login_details", action: "create"},html: {class: "login-box", id: "login_form"} do |form| %>
         <h1>Login</h1>
           <div class="textbox">
             <i class="fas fa-user"></i>
@@ -23,10 +24,18 @@
             <i class="fas fa-lock"></i>
             <%= form.password_field :password, placeholder: "New Password", class:"register-field", id:"password-field"   %>
           </div>
+          <br>
           <%= form.submit "Sign in", id:"btn"  %>
 
           <p>Don't have an account? <%= link_to "<span class='highlight'>Register</span>".html_safe, "/register" %> </p>
       <% end %>
+      <% unless flash.empty? %>
+      <div id="notice">
+      <% flash.each do |name, msg| %>
+       <%= content_tag :div, msg, class: [:alert, alert_for(name)]%>
+      <% end %>
+      <% end %>
+      </div>
     </section>
   </body>
 </html>

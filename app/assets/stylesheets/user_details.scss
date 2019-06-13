@@ -205,7 +205,7 @@ table{
 	font-family: 'Open Sans';
   background-color: #252525;
   position: relative;
-
+	top: 10px;
 	color: #EEEEEE;
 }
 tr{
@@ -214,6 +214,11 @@ tr{
 th,td{
   padding: 15px;
   text-align: center;
+}
+.ld{
+	color: white;
+	background-color: #EA6965;
+	font-size: 20px;
 }
 /* Cross Icon */
 .errorIcon
